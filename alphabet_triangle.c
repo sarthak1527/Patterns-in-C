@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int i, j, rows = 5;
-    char ch;
-    for(i = 1; i <= rows; i++) {
-        ch = 'A';
-        for(j = 1; j <= i; j++) {
-            printf("%c ", ch++);
-        }
+    int rows = 5;
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j <= i; j++)
+            printf("%c ", 'A' + j);
+
         printf("\n");
     }
+
     return 0;
 }
