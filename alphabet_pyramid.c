@@ -5,18 +5,19 @@ int main() {
     printf("Enter rows: ");
     scanf("%d", &n);
 
-    for(int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {
 
-        for(int space = 1; space <= n - i; space++)
+        /* Print spaces */
+        for (int s = 0; s < n - i; s++)
             printf(" ");
 
-        char ch = 'A';
-        for(int j = 1; j <= i; j++)
-            printf("%c", ch++);
+        /* Print ascending characters */
+        for (int j = 0; j < i; j++)
+            printf("%c", 'A' + j);
 
-        ch -= 2;
-        for(int j = 1; j < i; j++)
-            printf("%c", ch--);
+        /* Print descending characters */
+        for (int j = i - 2; j >= 0; j--)
+            printf("%c", 'A' + j);
 
         printf("\n");
     }
